@@ -28,7 +28,7 @@ interface TaskProviderProps {
 
 const TaskContext = createContext<TaskContextType | undefined>(undefined);
 
-const SERVER_URL = 'http://localhost:5000/api';
+const SERVER_URL = process.env.REACT_APP_SERVER_URL || 'https://taskmanagementsys-backend.vercel.app/api';
 
 export const TaskProvider: React.FC<TaskProviderProps> = ({ children }) => {
     const [tasks, setTasks] = useState<Task[]>([]);

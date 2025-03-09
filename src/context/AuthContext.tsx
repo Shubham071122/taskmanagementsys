@@ -18,7 +18,9 @@ interface AuthProviderProps {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-const SERVER_URL = 'http://localhost:5000/api';
+const SERVER_URL = process.env.REACT_APP_SERVER_URL || 'https://taskmanagementsys-backend.vercel.app/api';
+
+console.log("SERVER_URL in auth context: ", SERVER_URL);
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
