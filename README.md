@@ -37,9 +37,7 @@ npm install
 
 4. Create a `.env` file in the root directory and add the following environment variable:
 ```env
-REACT_APP_SERVER_URL=https://taskmanagementsys-backend.vercel.app/api
-# If running backend locally, use:
-# REACT_APP_SERVER_URL=http://localhost:5000/api
+REACT_APP_SERVER_URL=http://localhost:5000/api
 ```
 
 5. Start the development server:
@@ -66,8 +64,3 @@ The application will open in your default browser at `http://localhost:3000`
 ## API Integration
 
 The frontend communicates with a REST API backend. Make sure the backend server is running and the `REACT_APP_SERVER_URL` environment variable is set correctly.
-
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details 
